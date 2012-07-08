@@ -1,6 +1,6 @@
 <?php
 /*
-    Copyright (c) 2011 David Sferruzza <david.sferruzza@gmail.com>
+    Copyright (c) 2011-2012 David Sferruzza <david.sferruzza@gmail.com>
     
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
