@@ -42,7 +42,7 @@ define('DEFAUT', 'index');
 define('LAYOUT', 'layout');
 
 // Utiliser ou non l'url rewriting (true = oui)
-// Attention : ne modifie que les liens internes ; vous devez paramétrer l'URL Rewriting vous même
+// Attention : ne modifie que les liens internes ; vous devez paramétrer l'URL Rewriting indépendamment (déjà fait pour Apache 2)
 define('REWRITING', true);
 
 // Message à afficher si le layout est introuvable
