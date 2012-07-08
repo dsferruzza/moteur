@@ -16,6 +16,7 @@
 		<a href="<?php echo url('test3/donnees/dynamiques') ?>">Test3 (URL dynamique)</a><br />
 		<a href="<?php echo url('test3/donnees/dynamiqueslrebhirkg') ?>">Test3 (URL fausse)</a><br />
 		<a href="<?php echo url('lol') ?>">Page inexistante</a><br />
+		<a href="site2/">Un 2ème site propulsé par le même moteur</a><br />
 	</div>
 	<div>
 		<?php require RACINE.'/'.DOSSIER_VUES.'/'.$page.'.php'; ?>

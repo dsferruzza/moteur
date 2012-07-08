@@ -30,7 +30,7 @@ define('DOSSIER_JS', 'js');
 define('DOSSIER_CACHE_JS', false);
 
 // Adresse relative du répertoire contenant le layout (sans slash final)
-define('DOSSIER_LAYOUT', 'layout');
+define('DOSSIER_LAYOUT', 'site2/layout');
 
 // Adresse relative du répertoire contenant les actions (sans slash final)
 define('DOSSIER_ACTIONS', 'actions');

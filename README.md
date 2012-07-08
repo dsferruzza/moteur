@@ -12,6 +12,7 @@ Développé par et pour moi, dans le but de gagner du temps sur la création de 
 * URLs "jolies" (utilise la réécriture d'URL)
 * URLs dynamiques (ex : l'URL `/mapage/monparamètre` va affiche la page `mapage` en lui passant le paramètre `monparamètre` ; c'est à la page en question de définir les actions à faire en fonction du paramètre)
 * Compression automatique des fichiers CSS et JS
+* Possibilité de faire fonctionner plusieurs sites indépendants à partir du même noyau
 * Faible impact du framework sur les performances
 
 ## Prérequis
@@ -51,6 +52,14 @@ Il doit contenir la ligne suivante, qui sera remplacée par le contenu de la pag
 ```php
 <?php require RACINE.'/'.DOSSIER_VUES.'/'.$page.'.php'; ?>
 ```
+
+## Fonctionnement multi-site
+
+Il est possible de faire fonctionner plusieurs site distincts sur le même noyau !
+
+Dans la configuration d'exemple, le dossier `site2` contient son propre point d'entrée, qui défini des paramètres de fonctionnement (dossiers des pages, des actions, ...) différents de ceux du site principal.
+
+On peut donc propulser plusieurs site avec le même moteur !
 
 ## API
 
