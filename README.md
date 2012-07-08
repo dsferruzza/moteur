@@ -125,6 +125,9 @@ La bibliothèque [CssMin](http://code.google.com/p/cssmin/) est utilisée pour l
 
 La bibliothèque [jsmin-php][jsmin-php] est utilisée pour la compression.
 
+## Contribution
+
+Je suis ouvert à tout avis, question, suggestion !
 
 ## Licence
 
