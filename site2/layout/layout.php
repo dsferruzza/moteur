@@ -3,7 +3,6 @@
 <head>
 	<title>Moteur<?php if (defined('TITRE')) echo ' - '.TITRE ?></title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="<?php echo css('style.css') ?>" />
 </head>
 <body>
 	<div>
