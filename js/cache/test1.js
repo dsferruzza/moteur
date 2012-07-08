@@ -1,2 +1,2 @@
 
-alert('Le javascript fonctionne !!!');var mokjegojrkegoprkeojthopjerfkdskfzejipofgrjeght=2345678;
+alert('L\'inclusion du Javascript fonctionne !!!');var mokjegojrkegoprkeojthopjerfkdskfzejipofgrjeght=2345678;
