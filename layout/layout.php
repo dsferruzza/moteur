@@ -7,8 +7,8 @@
 </head>
 <body>
 	<div>
-		<p>Ceci est un petit site d'exemple réalisé à la va-vite pour montrer et tester les fonctionnalités de mon moteur.<br />
-		Pour bien comprendre le fonctionnement dudit moteur, il est conseillé de lire le fichier README et de regarder le code source des pages, actions et layouts qui me servent ici d'exemple.</p>
+		<p><em>Ceci est un petit site d'exemple réalisé à la va-vite pour montrer et tester les fonctionnalités de mon moteur.<br />
+		Pour bien comprendre le fonctionnement dudit moteur, il est conseillé de lire le fichier README et de regarder le code source des pages, actions et layouts qui me servent ici d'exemple.</em></p>
 		<h1>Menu</h1>
 		<a href="<?php echo url() ?>">Index</a><br />
 		<a href="<?php echo url(null, 'test=azerty') ?>">Index (avec paramètre GET)</a><br />
