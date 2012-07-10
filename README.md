@@ -132,4 +132,4 @@ Je suis ouvert à tout avis, question, suggestion !
 
 ## Licence
 
-GNU LGPL v3 [https://www.gnu.org/licenses/lgpl.html](https://www.gnu.org/licenses/lgpl.html)
+GNU LGPL v3 https://www.gnu.org/licenses/lgpl.html
