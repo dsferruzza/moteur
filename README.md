@@ -124,7 +124,7 @@ La bibliothèque [CssMin](http://code.google.com/p/cssmin/) est utilisée pour l
 
 `$minify` (défaut : true) : indique s'il faut compresser le fichier JS (true) ou pas (false) avant de retourner son adresse. Les fichiers compressés sont créés automatiquement dans un dossier dédié lorsque l'original est modifié. Il est conseillé de ne pas compresser les fichiers qui le sont déjà.
 
-La bibliothèque [jsmin-php][jsmin-php] est utilisée pour la compression.
+La bibliothèque [jsmin-php](https://github.com/rgrove/jsmin-php/) est utilisée pour la compression.
 
 ## Contribution
 
