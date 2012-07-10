@@ -10,7 +10,7 @@ Développé par et pour moi, dans le but de gagner du temps sur la création de 
 * Système simple de routage des URLs
 * Système de [layout](http://www.symfony-project.org/images/jobeet/1_4/04/layout.png)
 * URLs "jolies" (utilise la réécriture d'URL)
-* URLs dynamiques (ex : l'URL `/mapage/monparamètre` va affiche la page `mapage` en lui passant le paramètre `monparamètre` ; c'est à la page en question de définir les actions à faire en fonction du paramètre)
+* URLs dynamiques (ex : l'URL `/mapage/monparametre` va afficher la page `mapage` en lui passant le paramètre `monparametre` ; c'est à la page en question de définir les actions à faire en fonction du paramètre)
 * Compression automatique des fichiers CSS et JS
 * Possibilité de faire fonctionner plusieurs sites indépendants à partir du même noyau
 * Faible impact du framework sur les performances
@@ -22,8 +22,8 @@ Développé par et pour moi, dans le but de gagner du temps sur la création de 
 
 ## Installation
 
-* Copier les fichiers dans un dossier accessible par le serveur web.
-* Régler les paramètres dans le fichier index.php
+* Copier les fichiers dans un dossier accessible par le serveur web
+* Régler les paramètres dans le fichier `index.php`
 * Ajouter le contenu !
 
 ## Fonctionnement
@@ -91,7 +91,7 @@ Lorsqu'on appelle une page inexistante, cette constante existe et contient le no
 
 **NO_LAYOUT**
 
-Si cette constante est créée dans une action, le layout n'est pas affiché ; celle la page demandée l'est.
+Si cette constante est créée dans une action, le layout n'est pas affiché ; seule la page demandée l'est.
 
 ### Méthodes
 
@@ -99,7 +99,7 @@ Si cette constante est créée dans une action, le layout n'est pas affiché ; c
 
 Renvoie l'adresse d'une page interne.
 
-`$page` (défaut : null) : nom de la page.
+`$page` (défaut : null) : nom de la page
 
 `$get` (défaut : null) : paramètres GET sans point d'interrogation initial (exemple : `param1=val1&amp;param2=val2`)
 
