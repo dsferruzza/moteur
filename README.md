@@ -24,6 +24,7 @@ Développé par et pour moi, dans le but de gagner du temps sur la création de 
 
 * Copier les fichiers dans un dossier accessible par le serveur web
 * Régler les paramètres dans le fichier `index.php`
+* Modifier le paramètre `RewriteBase` dans le fichier `.htaccess` (mettre la même valeur que pour le paramètre `WWW` dans `index.php`)
 * Ajouter le contenu !
 
 ## Fonctionnement
