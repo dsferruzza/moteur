@@ -113,7 +113,7 @@ Renvoie l'adresse d'une page interne.
 
 `$minify` (défaut : true) : indique s'il faut compresser le fichier CSS (true) ou pas (false) avant de retourner son adresse. Les fichiers compressés sont créés automatiquement dans un dossier dédié lorsque l'original est modifié.
 
-La bibliothèque [CssMin](http://code.google.com/p/cssmin/) est utilisée pour la compression.
+La bibliothèque [CssMin](https://code.google.com/p/cssmin/) est utilisée pour la compression.
 
 
 **js($js, $minify)**
