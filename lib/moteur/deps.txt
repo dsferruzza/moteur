@@ -1,0 +1,10 @@
+Dépendances
+===========
+
+CSSTidy
+	https://github.com/Cerdic/CSSTidy
+	v1.4 (19eb2cf21b)
+
+jsmin-php
+	https://github.com/rgrove/jsmin-php/
+	6025086f2a
