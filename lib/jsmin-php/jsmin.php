@@ -59,6 +59,8 @@ class JSMin {
   protected $inputIndex  = 0;
   protected $inputLength = 0;
   protected $lookAhead   = null;
+  protected $y           = null;
+  protected $x           = null;
   protected $output      = '';
 
   // -- Public Static Methods --------------------------------------------------
@@ -111,6 +113,9 @@ class JSMin {
     switch($command) {
       case self::ACTION_KEEP_A:
         $this->output .= $this->a;
+        if ($this->a == $this->b && ($this->a == '+' || $this->a == '-') && $this->y != $this->a) {
+          $this->output .= ' ';
+        }
 
       case self::ACTION_DELETE_A:
         $this->a = $this->b;
@@ -124,7 +129,8 @@ class JSMin {
               break;
             }
 
-            if (ord($this->a) <= self::ORD_LF) {
+            //if (ord($this->a) <= self::ORD_LF) {
+            if ($this->a === null) {
               throw new JSMinException('Unterminated string literal.');
             }
 
@@ -164,8 +170,9 @@ class JSMin {
                 } elseif ($this->a === '\\') {
                   $this->output .= $this->a;
                   $this->a       = $this->get();
-                } elseif (ord($this->a) <= self::ORD_LF) {
-                  throw new JSMinException('Unterminated regular expression set in regex literal.');
+                //} elseif (ord($this->a) <= self::ORD_LF) {
+                } elseif ($this->a === null) {
+                  throw new JSMinException('Unterminated set in Regular Expression literal.');
                 }
               }
             } elseif ($this->a === '/') {
@@ -173,8 +180,9 @@ class JSMin {
             } elseif ($this->a === '\\') {
               $this->output .= $this->a;
               $this->a       = $this->get();
-            } elseif (ord($this->a) <= self::ORD_LF) {
-              throw new JSMinException('Unterminated regular expression literal.');
+            //} elseif (ord($this->a) <= self::ORD_LF) {
+            } elseif ($this->a === null) {
+              throw new JSMinException('Unterminated Regular Expression literal.');
             }
 
             $this->output .= $this->a;
@@ -198,6 +206,8 @@ class JSMin {
       if ($this->inputIndex < $this->inputLength) {
         $c = substr($this->input, $this->inputIndex, 1);
         $this->inputIndex += 1;
+        $this->y = $this->x;
+        $this->x = $c;
       } else {
         $c = null;
       }
@@ -383,4 +393,3 @@ class JSMin {
 
 // -- Exceptions ---------------------------------------------------------------
 class JSMinException extends Exception {}
-?>
