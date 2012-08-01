@@ -50,7 +50,12 @@ function css($css, $minify=true)
 			$fichier = fread($handle, filesize(RACINE.'/'.DOSSIER_CSS.'/'.$css));
 			fclose($handle);
 			
-			
+			require(RACINE.'/lib/CSSTidy/class.csstidy.php');
+			$csstidy = new csstidy();
+			$csstidy->set_cfg('merge_selectors', 2);
+			$csstidy->load_template('highest_compression');
+			$csstidy->parse($fichier);
+			$fichier = $csstidy->print->plain();
 	
 			$handle = fopen(RACINE.'/'.DOSSIER_CSS.'/cache/'.$css, 'w+');
 			fwrite($handle, $fichier);
