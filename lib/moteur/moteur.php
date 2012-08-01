@@ -50,8 +50,7 @@ function css($css, $minify=true)
 			$fichier = fread($handle, filesize(RACINE.'/'.DOSSIER_CSS.'/'.$css));
 			fclose($handle);
 			
-			include_once RACINE.'/lib/cssmin/cssmin.php';
-			$fichier = CssMin::minify($fichier);
+			
 	
 			$handle = fopen(RACINE.'/'.DOSSIER_CSS.'/cache/'.$css, 'w+');
 			fwrite($handle, $fichier);
