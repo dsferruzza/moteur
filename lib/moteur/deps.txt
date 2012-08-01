@@ -3,7 +3,7 @@ Dépendances
 
 CSSTidy
 	https://github.com/Cerdic/CSSTidy
-	v1.4 (19eb2cf21b)
+	259638eeca
 
 jsmin-php
 	https://github.com/jaydiablo/jsmin-php
