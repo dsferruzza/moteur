@@ -50,6 +50,7 @@ function css($css, $minify=true)
 			$fichier = fread($handle, filesize(RACINE.'/'.DOSSIER_CSS.'/'.$css));
 			fclose($handle);
 			
+			$fichier = str_replace('../', '../../', $fichier);	// Conserve certains liens relatifs (solution très très sommaire à parfaire)
 			include_once RACINE.'/lib/CSSTidy/class.csstidy.php';
 			$csstidy = new csstidy();
 			$csstidy->set_cfg('merge_selectors', 2);
