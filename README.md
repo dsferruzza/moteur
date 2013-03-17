@@ -38,7 +38,7 @@ Le moteur récupère le paramètre (par défaut : `p`) passé dans l'URL et cher
 
 Exemple : l'URL `/index.php?p=page` (ou `/page`) va chercher le fichier `pages/page.php`.
 
-Si la page n'existe pas, la page d'erreur 404 est sélectionnée à la place.
+Si la page ET l'action correspondante n'existent pas, la page d'erreur 404 est sélectionnée à la place de la page.
 
 ### Exécution de l'action correspondante
 
