@@ -131,21 +131,23 @@ if (!empty($_GET['p']))
 		}
 	}
 	unset ($n, $t, $url);
-	
-	// Si la page n'existe pas
-	if (!is_file(RACINE.'/'.DOSSIER_VUES.'/'.$page.'.php'))
-	{
-		// On déclenche une erreur 404 et on affiche la page correspondante
-		header('HTTP/1.0 404 Not Found');
-		define('E404_page', $page);
-		define('E404_referer', isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '?');
-		$page = ERREUR_404;
-	}
 }
 else $page = DEFAUT;
 
-// Chargement de l'action, si elle existe
+// Détermination du fichier d'action
 define('ACTION', RACINE.'/'.DOSSIER_ACTIONS.'/'.$page.'.php');
+
+// Si la page et l'action n'existent pas
+if (!is_file(RACINE.'/'.DOSSIER_VUES.'/'.$page.'.php') and !is_file(ACTION))
+{
+	// On déclenche une erreur 404 et on affiche la page correspondante
+	header('HTTP/1.0 404 Not Found');
+	define('E404_page', $page);
+	define('E404_referer', isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '?');
+	$page = ERREUR_404;
+}
+
+// Chargement de l'action, si elle existe
 if (is_file(ACTION)) require ACTION;
 
 // Affichage du layout, sauf si on l'a désactivé
